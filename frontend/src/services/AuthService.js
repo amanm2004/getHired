@@ -1,7 +1,7 @@
 // src/services/AuthService.js
 class AuthService {
   constructor() {
-    this.baseURL = `${process.env.REACT_APP_API_URL || "http://127.0.0.1:8000"}/api`;
+    this.baseURL = "https://gethired-3-su4n.onrender.com/api";
     this.tokenKey = 'gethired_token';
     this.userKey = 'gethired_user';
   }

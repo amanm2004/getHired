@@ -11,7 +11,9 @@ function JobAggregator() {
   const [hasSearched, setHasSearched] = useState(false);
   const [error, setError] = useState("");
 
-  const API_URL = process.env.REACT_APP_API_URL || "http://127.0.0.1:8000";
+  // const API_URL = process.env.REACT_APP_API_URL || "http://127.0.0.1:8000";
+  const searchUrl = `https://gethired-3-su4n.onrender.com/api/search?query=${encodeURIComponent(query)}&location=${encodeURIComponent(location)}`;
+
   const handleSearch = async (e) => {
     e.preventDefault();
     if (!query.trim()) return;

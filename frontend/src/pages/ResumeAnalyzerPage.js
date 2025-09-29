@@ -8,7 +8,8 @@ export default function ResumeAnalyzerPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  const API_URL = process.env.REACT_APP_API_URL || "http://127.0.0.1:8000";
+  // const API_URL = process.env.REACT_APP_API_URL || "http://127.0.0.1:8000";
+  const API_URL = "https://gethired-3-su4n.onrender.com";
   const handleFileSelect = (e) => {
     const selectedFile = e.target.files[0];
     setFile(selectedFile);
