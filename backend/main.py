@@ -20,18 +20,16 @@ from pydantic import BaseModel, EmailStr
 
 app = FastAPI(title="GetHired API", description="Job Search and Resume Analysis Platform")
 
-origins = [
-    "https://gethiredd-r4qz.onrender.com",  # Render frontend URL
-    "http://localhost:3000",               # Local dev
-]
-# Allow frontend access
+from fastapi.middleware.cors import CORSMiddleware
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
-     allow_credentials=True,
+    allow_origins=["*"],
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 # Load environment variables
 SERPAPI_KEY = os.getenv("SERPAPI_KEY", "71ecdc791ab0b6a894ca7b82ea1f0bdfb848f8bbc627461038fe1be084384ef2")
