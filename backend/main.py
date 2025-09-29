@@ -21,7 +21,7 @@ from pydantic import BaseModel, EmailStr
 app = FastAPI(title="GetHired API", description="Job Search and Resume Analysis Platform")
 
 origins = [
-    "https://gethiredd-r4qz.onrender.com/",  # Render frontend URL
+    "https://gethiredd-r4qz.onrender.com",  # Render frontend URL
     "http://localhost:3000",               # Local dev
 ]
 # Allow frontend access
