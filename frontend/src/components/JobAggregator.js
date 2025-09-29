@@ -26,7 +26,7 @@ function JobAggregator() {
     try {
       // Use authenticated fetch
       const response = await AuthService.authenticatedFetch(
-        `${API_URL}/api/search?query=${encodeURIComponent(query)}&location=${encodeURIComponent(location)}`
+        `${searchUrl}/api/search?query=${encodeURIComponent(query)}&location=${encodeURIComponent(location)}`
       );
       
       if (!response.ok) {
