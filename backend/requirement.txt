@@ -14,3 +14,4 @@ pytesseract
 python-docx
 mammoth
 pydantic[email]
+bcrypt==3.2.0
