@@ -8,6 +8,7 @@ export default function ResumeAnalyzerPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
+  const API_URL = process.env.REACT_APP_API_URL || "http://127.0.0.1:8000";
   const handleFileSelect = (e) => {
     const selectedFile = e.target.files[0];
     setFile(selectedFile);
@@ -69,7 +70,7 @@ export default function ResumeAnalyzerPage() {
     setLoading(true);
 
     try {
-      const res = await fetch("http://127.0.0.1:8000/api/analyze_resume", {
+      const res = await fetch(`${API_URL}/api/analyze_resume`, {
         method: "POST",
         body: formData,
       });

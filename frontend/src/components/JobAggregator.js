@@ -11,6 +11,7 @@ function JobAggregator() {
   const [hasSearched, setHasSearched] = useState(false);
   const [error, setError] = useState("");
 
+  const API_URL = process.env.REACT_APP_API_URL || "http://127.0.0.1:8000";
   const handleSearch = async (e) => {
     e.preventDefault();
     if (!query.trim()) return;
@@ -23,7 +24,7 @@ function JobAggregator() {
     try {
       // Use authenticated fetch
       const response = await AuthService.authenticatedFetch(
-        `http://127.0.0.1:8000/api/search?query=${encodeURIComponent(query)}&location=${encodeURIComponent(location)}`
+        `${API_URL}/api/search?query=${encodeURIComponent(query)}&location=${encodeURIComponent(location)}`
       );
       
       if (!response.ok) {
