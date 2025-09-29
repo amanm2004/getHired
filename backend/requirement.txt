@@ -13,3 +13,4 @@ pdf2image
 pytesseract
 python-docx
 mammoth
+pydantic[email]
