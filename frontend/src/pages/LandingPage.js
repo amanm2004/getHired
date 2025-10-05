@@ -100,6 +100,16 @@ const LandingPage = () => {
               Start Your Journey
             </Link>
           </div>
+
+          {/* Education Disclaimer */}
+          <footer className="education-disclaimer">
+            <p>
+              <strong>Disclaimer:</strong> This website, <span className="cta-highlight">GetHired</span>, 
+              is a college project created solely for educational purposes. 
+              It is not intended for commercial use, and all data or content displayed 
+              is for demonstration only.
+            </p>
+          </footer>
         </div>
       </section>
     </div>
